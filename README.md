@@ -36,3 +36,7 @@ The routes:
 - Get: /GET/people/
 - Put: /PUT/people/
 - Delete: /*/DELETE/people
+
+The route structure on DynamoDB:
+
+![DynamoDB](./screenshot-3.png)
