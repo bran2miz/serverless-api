@@ -1,42 +1,43 @@
-# Dynamo DB
+# Serverless API
 
-## Notes:
+## Author: Brandon Mizutani  
+## Version: 1.0.0  
 
-Day will consist of going to DynamoDB which is a NoSQL Database (similar to MongoDB)
+### Dynamo DB
 
-- Create a table (name it people)
-- partition key will be the primary key (call it id) and keep the rest of the settings.
+#### Notes:
 
-Once you create table go to API Gateway service
-    - Select REST API (the regular one)
+This project involves setting up a serverless API using DynamoDB, a NoSQL Database similar to MongoDB.
 
-Then name the route, and create the gateway. 
+- Start by creating a table named "people" in DynamoDB with the partition key as the primary key (id), and keep the rest of the settings as default.
 
-You will then want to hit create resource.
-    - just give the resource a name; no need to select CORS or configure as proxy resource. 
+Once the table is created, proceed to the API Gateway service.
 
-Hit create method 
-![Method](./screenshot-1.png)
+- Select the REST API (the regular one).
 
-Select method type
+Name the route and create the gateway.
 
-PAUSE ---- have to go and create a lambda function!
+Create a resource without selecting CORS or configuring it as a proxy resource.
 
-Now go to lambda to create a function
+Create a method.
 
-Name function, Choose the Node.js 18 and then create.
+Select the method type.
 
-When function is created, we have to bring in some **dependencies**. But first change the name of the file from index.mjs to index.js
+Before proceeding, create a Lambda function.
 
-https://pvbv6y6z5l.execute-api.us-west-2.amazonaws.com/undefined
+Name the function, choose Node.js 18, and create it.
 
-The routes:
+Once the function is created, ensure to bring in the necessary dependencies. First, change the name of the file from index.mjs to index.js.
 
-- Post: /*/POST/people
-- Get: /GET/people/
-- Put: /PUT/people/
-- Delete: /*/DELETE/people
+The routes for the API:
 
-The route structure on DynamoDB:
+- POST: `/*/POST/people`
+- GET: `/GET/people/`
+- PUT: `/PUT/people/`
+- DELETE: `/*/DELETE/people`
+
+The route structure on DynamoDB is as depicted in the following screenshot:
 
 ![DynamoDB](./screenshot-3.png)
+
+Ensure proper configuration and testing of the API endpoints to ensure smooth functionality.
